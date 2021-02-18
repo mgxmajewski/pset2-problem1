@@ -9,3 +9,5 @@
 balance = 484
 annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
+annualInterestRate = annualInterestRate / 12
+monthlyPayment = balance * monthlyPaymentRate
