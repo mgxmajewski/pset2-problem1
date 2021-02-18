@@ -11,3 +11,13 @@ annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
 annualInterestRate = annualInterestRate / 12
 monthlyPayment = balance * monthlyPaymentRate
+
+
+for i in range(12):
+    monthlyPayment = balance * monthlyPaymentRate
+    unpaidBalance = balance - monthlyPayment
+    monthlyPaymentAfterInterest = monthlyPayment - unpaidBalance * annualInterestRate
+    balance -= monthlyPaymentAfterInterest
+
+
+print("Remaining balance:", round(balance, 2))
