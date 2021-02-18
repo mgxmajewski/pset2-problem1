@@ -1,19 +1,11 @@
-# This is a sample Python script.
+# Paying Debt off in a Year
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# This program calculate the credit card balance after one year
+# if a person only pays the minimum monthly payment required
+# by the credit card company each month.
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-popo = 2+2
-print(popo)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Declare initial variables
+balance = 484
+annualInterestRate = 0.2
+monthlyPaymentRate = 0.04
