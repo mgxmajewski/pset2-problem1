@@ -9,16 +9,20 @@
 balance = 484
 annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
-year = 12
-monthlyInterestRate = annualInterestRate / year
-monthlyPayment = balance * monthlyPaymentRate
+year_months = 12
+monthlyInterestRate = annualInterestRate / year_months
 
 
-for month in range(year):
-    monthlyPayment = balance * monthlyPaymentRate
-    unpaidBalance = balance - monthlyPayment
-    monthlyPaymentAfterInterest = monthlyPayment - unpaidBalance * monthlyInterestRate
-    balance -= monthlyPaymentAfterInterest
+for month in range(year_months):
+    # Calculate down payment of capital
+    monthlyCapitalPayment = balance * monthlyPaymentRate
+
+    # Calculate monthly interests
+    unpaidBalance = balance - monthlyCapitalPayment
+    monthlyInterestPayment = unpaidBalance * monthlyInterestRate
+
+    # Deducting balance by capital and interest payments
+    balance -= monthlyCapitalPayment - monthlyInterestPayment
 
 
 print("Remaining balance:", round(balance, 2))
