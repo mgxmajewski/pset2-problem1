@@ -9,11 +9,12 @@
 balance = 484
 annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
-monthlyInterestRate = annualInterestRate / 12
+year = 12
+monthlyInterestRate = annualInterestRate / year
 monthlyPayment = balance * monthlyPaymentRate
 
 
-for i in range(12):
+for month in range(year):
     monthlyPayment = balance * monthlyPaymentRate
     unpaidBalance = balance - monthlyPayment
     monthlyPaymentAfterInterest = monthlyPayment - unpaidBalance * monthlyInterestRate
