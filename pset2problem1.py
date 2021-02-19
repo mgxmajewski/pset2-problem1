@@ -6,23 +6,17 @@
 
 
 # Declare initial variables
-balance = 484
+balance = 4773
 annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
+# Paste your code into this box
+# Declare variables to calculate lowest possible monthly down payment
+# Declare variables to calculate lowest possible monthly down payment
+tempBalance = balance
 year_months = 12
 monthlyInterestRate = annualInterestRate / year_months
 
+# Value to be found
+minimumMonthlyPayment = 0
+seek_increment = 10
 
-for month in range(year_months):
-    # Calculate down payment of capital
-    monthlyCapitalPayment = balance * monthlyPaymentRate
-
-    # Calculate monthly interests
-    unpaidBalance = balance - monthlyCapitalPayment
-    monthlyInterestPayment = unpaidBalance * monthlyInterestRate
-
-    # Deducting balance by capital and interest payments
-    balance -= monthlyCapitalPayment - monthlyInterestPayment
-
-
-print("Remaining balance:", round(balance, 2))
