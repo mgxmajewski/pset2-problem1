@@ -20,3 +20,15 @@ monthlyInterestRate = annualInterestRate / year_months
 minimumMonthlyPayment = 0
 seek_increment = 10
 
+while True:
+    for months in range(year_months):
+        unpaidBalance = balance - minimumMonthlyPayment
+        monthlyInterestPayment = unpaidBalance * monthlyInterestRate
+        balance = unpaidBalance + monthlyInterestPayment
+
+    if balance <= 0:
+        print("Lowest Payment:", round(minimumMonthlyPayment, 2))
+        break
+    else:
+        minimumMonthlyPayment += seek_increment
+        balance = tempBalance
